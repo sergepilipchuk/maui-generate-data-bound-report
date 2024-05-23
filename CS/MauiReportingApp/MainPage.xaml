@@ -1,0 +1,17 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
+             xmlns:dxc="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
+             xmlns:pdf="clr-namespace:DevExpress.Maui.Pdf;assembly=DevExpress.Maui.Pdf"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="true" 
+             Shell.NavBarIsVisible="False"
+             x:Class="MauiReportingApp.MainPage">
+    <!--<Grid RowDefinitions="100,*">
+        <dxc:DXToolbar Grid.Row="0">
+            <dxc:ToolbarButton Content="Share" Command="{Binding Commands.ShareDocument, Source={x:Reference pdfViewer}}"/>
+        </dxc:DXToolbar>
+        <pdf:PdfViewer x:Name="pdfViewer" Grid.Row="1" ShowToolbar="False"/>
+    </Grid>-->
+    <pdf:PdfViewer x:Name="pdfViewer" ShowToolbar="True"/>
+</ContentPage>

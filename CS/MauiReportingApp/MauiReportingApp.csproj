@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net8.0-android;net8.0-ios</TargetFrameworks>
+        <OutputType>Exe</OutputType>
+        <UseMaui>true</UseMaui>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <SingleProject>true</SingleProject>
+        <RootNamespace>MauiReportingApp</RootNamespace>
+
+        <!-- Display name -->
+        <ApplicationTitle>MauiReportingApp</ApplicationTitle>
+
+        <!-- App Identifier -->
+        <ApplicationId>com.companyname.mauireportingapp</ApplicationId>
+        <ApplicationIdGuid>365FC596-1146-4CB7-9DE4-B456D1CD470F</ApplicationIdGuid>
+        <!-- Versions -->
+        <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+        <ApplicationVersion>1</ApplicationVersion>
+
+        <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+        <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+        <UseInterpreter Condition="$(TargetFramework.Contains('-ios')) AND '$(Configuration)' == 'Release'">True</UseInterpreter>
+    </PropertyGroup>
+    <ItemGroup>
+        <!-- App Icon -->
+        <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#6750A4" />
+
+        <!-- Splash Screen -->
+        <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#6750A4" BaseSize="128,128" />
+
+        <!-- Images -->
+        <MauiImage Include="Resources\Images\*" />
+
+        <!-- Custom Fonts -->
+        <MauiFont Include="Resources\Fonts\*" />
+
+        <!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+        <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="DevExpress.Drawing.Skia" Version="24.1.2-beta" />
+        <PackageReference Include="DevExpress.Maui.Pdf" Version="24.1.2-beta" />
+        <PackageReference Include="DevExpress.Reporting.Core" Version="24.1.2-beta" />
+        <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+        <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+        <PackageReference Include="DotNetMeteor.HotReload.Plugin" Version="3.*" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <PackageReference Include="DevExpress.Maui.Controls" Version="24.1.2-beta" />
+        <PackageReference Include="DevExpress.Maui.Core" Version="24.1.2-beta" />
+        <PackageReference Include="DevExpress.Maui.Charts" Version="24.1.2-beta" />
+        <PackageReference Include="DevExpress.Maui.CollectionView" Version="24.1.2-beta" />
+        <PackageReference Include="DevExpress.Maui.Editors" Version="24.1.2-beta" />
+        <PackageReference Include="DevExpress.Maui.DataGrid" Version="24.1.2-beta" />
+        <PackageReference Include="DevExpress.Maui.Scheduler" Version="24.1.2-beta" />
+        <PackageReference Include="DevExpress.Maui.Gauges" Version="24.1.2-beta" />
+        <PackageReference Include="DevExpress.Data" Version="24.1.2-beta" />
+        <PackageReference Include="DevExpress.Drawing" Version="24.1.2-beta" />
+        <PackageReference Include="DevExpress.Pdf.Core" Version="24.1.2-beta" />
+        <PackageReference Include="DevExpress.Pdf.Drawing" Version="24.1.2-beta" />
+        <ProjectReference Include="..\ReportLibrary\ReportLibrary.csproj" />
+        <TrimmableAssembly Include="DevExpress.Data.v24.1.2-beta" />
+    </ItemGroup>
+</Project>
