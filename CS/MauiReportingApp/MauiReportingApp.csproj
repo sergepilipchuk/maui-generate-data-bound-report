@@ -52,12 +52,6 @@
     <ItemGroup>
         <PackageReference Include="DevExpress.Maui.Controls" Version="24.1.2-beta" />
         <PackageReference Include="DevExpress.Maui.Core" Version="24.1.2-beta" />
-        <PackageReference Include="DevExpress.Maui.Charts" Version="24.1.2-beta" />
-        <PackageReference Include="DevExpress.Maui.CollectionView" Version="24.1.2-beta" />
-        <PackageReference Include="DevExpress.Maui.Editors" Version="24.1.2-beta" />
-        <PackageReference Include="DevExpress.Maui.DataGrid" Version="24.1.2-beta" />
-        <PackageReference Include="DevExpress.Maui.Scheduler" Version="24.1.2-beta" />
-        <PackageReference Include="DevExpress.Maui.Gauges" Version="24.1.2-beta" />
         <PackageReference Include="DevExpress.Data" Version="24.1.2-beta" />
         <PackageReference Include="DevExpress.Drawing" Version="24.1.2-beta" />
         <PackageReference Include="DevExpress.Pdf.Core" Version="24.1.2-beta" />
