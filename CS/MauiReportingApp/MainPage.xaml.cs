@@ -10,17 +10,17 @@ public partial class MainPage : ContentPage {
     public MainPage() {
         InitializeComponent();
 
-        //XtraReport report = CreateTableReportInWizard();
+        XtraReport report = CreateTableReportInWizard();
         //XtraReport report = CreateReport();
-        XtraReport report = CreateTableReport();
+        //XtraReport report = CreateTableReport();
 
         string resultFile = Path.Combine(FileSystem.Current.AppDataDirectory, report.Name + ".pdf");
         report.ExportToPdf(resultFile);
 
         pdfViewer.DocumentSource = PdfDocumentSource.FromFile(resultFile);
-
     }
 
+    /*
     public XtraReport CreateReport() {
         XtraReport report = new XtraReport() { Name = "Sample" };
         DetailBand detail = new DetailBand();
@@ -35,7 +35,8 @@ public partial class MainPage : ContentPage {
         report.CreateDocument();
         return report;
     }
-
+    */
+    /*
     public XtraReport CreateTableReport() {
         XtraReport report = new XtraReport() { Name = "Sample" };
         report.DataSource = new CountryDataSource();
@@ -82,6 +83,7 @@ public partial class MainPage : ContentPage {
         report.CreateDocument();
         return report;
     }
+    */
 
     public XtraReport CreateTableReportInWizard() {
         XtraReportInstance report = new XtraReportInstance() { Name = "Sample" };

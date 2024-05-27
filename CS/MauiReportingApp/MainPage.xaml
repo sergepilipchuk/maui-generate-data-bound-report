@@ -7,11 +7,5 @@
              ios:Page.UseSafeArea="true" 
              Shell.NavBarIsVisible="False"
              x:Class="MauiReportingApp.MainPage">
-    <!--<Grid RowDefinitions="100,*">
-        <dxc:DXToolbar Grid.Row="0">
-            <dxc:ToolbarButton Content="Share" Command="{Binding Commands.ShareDocument, Source={x:Reference pdfViewer}}"/>
-        </dxc:DXToolbar>
-        <pdf:PdfViewer x:Name="pdfViewer" Grid.Row="1" ShowToolbar="False"/>
-    </Grid>-->
     <pdf:PdfViewer x:Name="pdfViewer" ShowToolbar="True"/>
 </ContentPage>

@@ -9,7 +9,6 @@ namespace MauiReportingApp;
 public static class MauiProgram {
     public static MauiApp CreateMauiApp() {
         ThemeManager.ApplyThemeToSystemBars = true;
-
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
@@ -25,5 +24,4 @@ public static class MauiProgram {
             });
         return builder.Build();
     }
-
 }
