@@ -6,6 +6,18 @@
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              ios:Page.UseSafeArea="true" 
              Shell.NavBarIsVisible="False"
-             x:Class="MauiReportingApp.MainPage">
-    <pdf:PdfViewer x:Name="pdfViewer" ShowToolbar="True"/>
+             x:Class="MauiReportingApp.MainPage"
+             Loaded="ContentPage_Loaded">
+    <Grid>
+        <dxc:ShimmerView IsLoading="True" x:Name="loadingShimmer">
+            <dxc:ShimmerView.LoadingView>
+                <Grid RowDefinitions="50,*,*" RowSpacing="10" Padding="20">
+                    <Rectangle Style="{StaticResource shimmerRectangle}"/>
+                    <Rectangle Style="{StaticResource shimmerRectangle}" Grid.Row="1"/>
+                    <Rectangle Style="{StaticResource shimmerRectangle}" Grid.Row="2"/>
+                </Grid>
+            </dxc:ShimmerView.LoadingView>
+            <pdf:PdfViewer x:Name="pdfViewer" ShowToolbar="True"/>
+        </dxc:ShimmerView>
+    </Grid>
 </ContentPage>

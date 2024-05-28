@@ -227,5 +227,10 @@
         <Setter Property="UnselectedTabColor" Value="{dx:ThemeColor OnSurface}" />
         <Setter Property="SelectedTabColor" Value="{dx:ThemeColor Primary}" />
     </Style>
-
+    <Style TargetType="Rectangle" x:Key="shimmerRectangle">
+        <Setter Property="RadiusX" Value="14"/>
+        <Setter Property="RadiusY" Value="14"/>
+        <Setter Property="RadiusY" Value="14"/>
+        <Setter Property="Fill" Value="LightGray"/>
+    </Style>
 </ResourceDictionary>

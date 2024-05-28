@@ -40,22 +40,22 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="DevExpress.Drawing.Skia" Version="24.1.2-beta" />
-        <PackageReference Include="DevExpress.Maui.Pdf" Version="24.1.2-beta" />
-        <PackageReference Include="DevExpress.Reporting.Core" Version="24.1.2-beta" />
+        <PackageReference Include="DevExpress.Drawing.Skia" Version="23.2" />
+        <PackageReference Include="DevExpress.Maui.Pdf" Version="23.2" />
+        <PackageReference Include="DevExpress.Reporting.Core" Version="23.2" />
         <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
         <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
         <PackageReference Include="DotNetMeteor.HotReload.Plugin" Version="3.*" /> <!-- TODO -->
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="DevExpress.Maui.Controls" Version="24.1.2-beta" />
-        <PackageReference Include="DevExpress.Maui.Core" Version="24.1.2-beta" />
-        <PackageReference Include="DevExpress.Data" Version="24.1.2-beta" />
-        <PackageReference Include="DevExpress.Drawing" Version="24.1.2-beta" />
-        <PackageReference Include="DevExpress.Pdf.Core" Version="24.1.2-beta" />
-        <PackageReference Include="DevExpress.Pdf.Drawing" Version="24.1.2-beta" />
+        <PackageReference Include="DevExpress.Maui.Controls" Version="23.2" />
+        <PackageReference Include="DevExpress.Maui.Core" Version="23.2" />
+        <PackageReference Include="DevExpress.Data" Version="23.2" />
+        <PackageReference Include="DevExpress.Drawing" Version="23.2" />
+        <PackageReference Include="DevExpress.Pdf.Core" Version="23.2" />
+        <PackageReference Include="DevExpress.Pdf.Drawing" Version="23.2" />
         <ProjectReference Include="..\ReportLibrary\ReportLibrary.csproj" />
-        <TrimmableAssembly Include="DevExpress.Data.v24.1.2-beta" />
+        <TrimmableAssembly Include="DevExpress.Data.v23.2" />
     </ItemGroup>
 </Project>
