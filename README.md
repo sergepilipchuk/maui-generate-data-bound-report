@@ -4,7 +4,7 @@
 
 # DevExpress Reporting for .NET MAUI - Generate Bound-Data Report
 
-This example implements a view that opens a PDF File, obtains form fields, and allows you to populate them. The sample application supports a limited set of PDF form fields. You can extend the capabilities of this sample (and support additional PDF form fields) as requirements dictate
+This example generates a data-bound report in the [DevExpress Report Designer](https://docs.devexpress.com/MAUI/404437/reporting/reporting-overview) and displays it in the [PDF Viewer for .NET MAUI](https://docs.devexpress.com/MAUI/404632/pdf-viewer/pdf-viewer). To use Reporting APIs in a .NET MAUI project, you need a license that includes [DevExpress Reporting](https://www.devexpress.com/subscriptions/reporting/).
 
 <img width="40%" alt="DevExpress Reporting for .NET MAUI - Generate Bound-Data Report" src="Images/app-preview.png">
 
