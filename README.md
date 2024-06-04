@@ -14,7 +14,21 @@ This example generates a data-bound report in the [DevExpress Report Designer](h
 
 ## Implementation Details
 
-1. Call the `CreateTableReportAsync()` function to generate a new report:
+1. Define the `CreateTableReportAsync()` function that creates a new report. Use the `XtraReportInstance()` constructor to generate a report instance. Call the [`CreateDocument()`](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.XtraReport.CreateDocument) method to create a document from the report:
+
+    ```csharp
+    public async Task<XtraReport> CreateTableReportAsync() {
+        XtraReportInstance report = null;
+        await Task.Run(() =>
+        {
+            report = new XtraReportInstance() { Name = "Sample" };
+            report.CreateDocument();
+        });
+        return report;
+    }
+    ```
+
+2. Call the `CreateTableReportAsync()` function to generate a new report and get a path to the report:
 
     ```csharp
     private async void ContentPage_Loaded(object sender, EventArgs e) {
@@ -24,7 +38,7 @@ This example generates a data-bound report in the [DevExpress Report Designer](h
     }
     ```
 
-2. Call the `ExportToPdf(resultFile)` method to convert the report to PDF:
+3. Call the `ExportToPdf(resultFile)` method to convert the report to PDF:
 
     ```csharp
     private async void ContentPage_Loaded(object sender, EventArgs e) {
@@ -35,7 +49,7 @@ This example generates a data-bound report in the [DevExpress Report Designer](h
     }
     ```
 
-3. Use the `PdfViewer.DocumentSource` property to open the report  in the PDF Viewer:
+4. Use the `PdfViewer.DocumentSource` property to open the report in the PDF Viewer control:
 
     ```csharp
     private async void ContentPage_Loaded(object sender, EventArgs e) {
@@ -51,6 +65,7 @@ This example generates a data-bound report in the [DevExpress Report Designer](h
 
 - [MainPage.xaml](./CS/MauiReportingApp/MainPage.xaml)
 - [MainPage.xaml.cs](./CS/MauiReportingApp/MainPage.xaml.cs)
+- [XtraReportInstance.cs](./CS/ReportLibrary/XtraReportInstance.cs)
 - [XtraReportInstance.Designer.cs](./CS/ReportLibrary/XtraReportInstance.Designer.cs)
 
 ## Documentation
