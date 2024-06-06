@@ -53,7 +53,7 @@ You can adjust this example to use any existing report. In this repository, the 
     }
     ```
 
-4. Use the `PdfViewer.DocumentSource` property to open the report in the PDF Viewer control:
+4. Use the [`PdfViewer.DocumentSource`](https://docs.devexpress.com/MAUI/DevExpress.Maui.Pdf.PdfViewer.DocumentSource) property to open the report in the PDF Viewer control:
 
     ```csharp
     private async void ContentPage_Loaded(object sender, EventArgs e) {
