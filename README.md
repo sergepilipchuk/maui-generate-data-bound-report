@@ -2,9 +2,13 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# DevExpress Reporting for .NET MAUI - Generate Bound-Data Report
+# DevExpress Reporting for .NET MAUI - Generate and Display a Data-Bound Report
 
-This example generates a data-bound report in the [DevExpress Report Designer](https://docs.devexpress.com/MAUI/404437/reporting/reporting-overview) and displays it in the [PDF Viewer for .NET MAUI](https://docs.devexpress.com/MAUI/404632/pdf-viewer/pdf-viewer). To use Reporting APIs in a .NET MAUI project, you need a license that includes [DevExpress Reporting](https://www.devexpress.com/subscriptions/reporting/).
+This example uses [DevExpress PDF Viewer for .NET MAUI](https://docs.devexpress.com/MAUI/404632/pdf-viewer/pdf-viewer) to display a data-bound report in a mobile app. 
+
+You can adjust this example to use any previously-defined report. In this repository, the **ReportLibrary** folder contains the data source and the report layout definition. We constructed the report with the help of the [DevExpress Report Designer](https://docs.devexpress.com/MAUI/404437/reporting/reporting-overview) and named the report class `XtraReportInstance`. The code below creates this object to generate a report document. 
+
+**NOTE**: To use Reporting APIs in a .NET MAUI project, you need a license that includes [DevExpress Reporting](https://www.devexpress.com/subscriptions/reporting/).
 
 <img width="40%" alt="DevExpress Reporting for .NET MAUI - Generate Bound-Data Report" src="Images/app-preview.png">
 
@@ -28,12 +32,11 @@ This example generates a data-bound report in the [DevExpress Report Designer](h
     }
     ```
 
-2. Call the `CreateTableReportAsync()` function to generate a new report and get a path to the report:
+2. When the page loads, call the `CreateTableReportAsync()` function to generate a new report:
 
     ```csharp
     private async void ContentPage_Loaded(object sender, EventArgs e) {
         XtraReport report = await CreateTableReportAsync();
-        string resultFile = Path.Combine(FileSystem.Current.AppDataDirectory, report.Name + ".pdf");
         // ...
     }
     ```
@@ -42,7 +45,7 @@ This example generates a data-bound report in the [DevExpress Report Designer](h
 
     ```csharp
     private async void ContentPage_Loaded(object sender, EventArgs e) {
-        XtraReport report = await CreateTableReportAsync();
+        // ...
         string resultFile = Path.Combine(FileSystem.Current.AppDataDirectory, report.Name + ".pdf");
         report.ExportToPdf(resultFile);
         // ...    
@@ -53,9 +56,7 @@ This example generates a data-bound report in the [DevExpress Report Designer](h
 
     ```csharp
     private async void ContentPage_Loaded(object sender, EventArgs e) {
-        XtraReport report = await CreateTableReportAsync();
-        string resultFile = Path.Combine(FileSystem.Current.AppDataDirectory, report.Name + ".pdf");
-        report.ExportToPdf(resultFile);
+        // ...
         pdfViewer.DocumentSource = PdfDocumentSource.FromFile(resultFile);
         // ...    
     }
